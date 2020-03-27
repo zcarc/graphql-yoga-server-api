@@ -7,3 +7,5 @@ const server = new GraphQLServer({
 });
 
 server.start(() => console.log("GraphQL server Running"));
+
+// #13 Overview to the final API
