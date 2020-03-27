@@ -1,4 +1,4 @@
-import {getMovies, getById, addMovie, deleteMovie} from './db';
+import {getMovies} from './db';
 
 
 // resolvers는 어떤 형태로든 원하는 대로 변화할 수 있다. (example: go to any api or any db)
@@ -8,13 +8,7 @@ const resolvers = {
 
   Query: {
     movies: () => getMovies(),
-    movie: (_, { id }) => getById(id),
   },
-
-  Mutation: {
-    addMovie: (_, {name, score}) => addMovie(name, score),
-    deleteMovie: (_, {id}) => deleteMovie(id)
-  }
 
 };
 
