@@ -33,3 +33,8 @@ export const getById = (id) => {
     .then(json => json.data.movie);
 
 }
+
+// 비슷한 영화 추천으로 간단하게 전체에서 4개만 가져올 수 있도록 했다.
+export const getByIdForSuggestions = id => {
+  return getMovies(4);
+};
